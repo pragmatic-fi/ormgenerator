@@ -1,2 +1,2 @@
 # ormgenerator
-Generate SQLAlchemy ORMmodel from JSON schema. Alpha, not useful at all.
+Generate SQLAlchemy ORM model from JSON schema. Alpha, not useful at all.
