@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "ormgenerator"
+version = "0.1.0"
+description = "Generate SQLAlchemy ORM model from JSON schema."
+authors = ["Alexey Vyskubov <alexey@pentode.fi>"]
+license = "License :: OSI Approved :: BSD License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+PyYAML = "^6.0.1"
+click = "^8.1.7"
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.2.4"
+pyright = "^1.1.369"
+ruff = "^0.4.10"
+mypy = "^1.10.1"
+black = "^24.4.2"
+ipython = "^8.25.0"
+pytest = "^8.2.2"
+pytest-cov = "^5.0.0"
+pytest-socket = "^0.7.0"
+pytest-xdist = "^3.6.1"
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.run]
+omit = ["tests/**/*"]
+
+[tool.poetry.scripts]
+generate = "ormgenerator.main:main"
+
+[tool.isort]
+profile = "black"
