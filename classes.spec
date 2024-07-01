@@ -1,2 +1,2 @@
-- Project: "shemas/project.json"
+- Project: "schemas/project.json"
 - User: "schemas/user.json"
