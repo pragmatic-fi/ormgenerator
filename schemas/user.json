@@ -1,0 +1,1775 @@
+{
+  "type": "object",
+  "properties": {
+    "total_count": {
+      "type": "number"
+    },
+    "users": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "username": {
+            "type": "string"
+          },
+          "suspended": {
+            "type": [
+              "boolean",
+              "null"
+            ],
+            "description": "If the user is suspended."
+          },
+          "closed": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "is_active": {
+            "type": [
+              "boolean",
+              "null"
+            ],
+            "description": "permission: `user:admin`"
+          },
+          "force_verify": {
+            "type": [
+              "boolean",
+              "null"
+            ],
+            "description": "permission: `user:admin`"
+          },
+          "avatar": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "email": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "permission: `user:personal`"
+          },
+          "reputation": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "entire_history": {
+                "type": "object",
+                "properties": {
+                  "overall": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "on_budget": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "on_time": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "positive": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "category_ratings": {
+                    "type": "object",
+                    "properties": {
+                      "communication": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "expertise": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "hire_again": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "quality": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "professionalism": {
+                        "type": "number",
+                        "description": "Decimal"
+                      }
+                    }
+                  },
+                  "all": {
+                    "type": "number"
+                  },
+                  "reviews": {
+                    "type": "number"
+                  },
+                  "incomplete_reviews": {
+                    "type": "number"
+                  },
+                  "complete": {
+                    "type": "number"
+                  },
+                  "incomplete": {
+                    "type": "number"
+                  },
+                  "earnings": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "description": "permission: `user:financial`. Decimal"
+                  },
+                  "completion_rate": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "rehire_rate": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "description": "Decimal"
+                  }
+                },
+                "required": [
+                  "overall",
+                  "on_budget",
+                  "on_time",
+                  "positive",
+                  "all",
+                  "reviews",
+                  "incomplete_reviews",
+                  "complete",
+                  "incomplete",
+                  "earnings",
+                  "completion_rate"
+                ]
+              },
+              "last3months": {
+                "type": "object",
+                "properties": {
+                  "overall": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "on_budget": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "on_time": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "positive": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "category_ratings": {
+                    "type": "object",
+                    "properties": {
+                      "communication": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "expertise": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "hire_again": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "quality": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "professionalism": {
+                        "type": "number",
+                        "description": "Decimal"
+                      }
+                    }
+                  },
+                  "all": {
+                    "type": "number"
+                  },
+                  "reviews": {
+                    "type": "number"
+                  },
+                  "incomplete_reviews": {
+                    "type": "number"
+                  },
+                  "complete": {
+                    "type": "number"
+                  },
+                  "incomplete": {
+                    "type": "number"
+                  },
+                  "earnings": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "description": "permission: `user:financial`. Decimal"
+                  },
+                  "completion_rate": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "rehire_rate": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "description": "Decimal"
+                  }
+                },
+                "required": [
+                  "overall",
+                  "on_budget",
+                  "on_time",
+                  "positive",
+                  "all",
+                  "reviews",
+                  "incomplete_reviews",
+                  "complete",
+                  "incomplete",
+                  "earnings",
+                  "completion_rate"
+                ]
+              },
+              "last12months": {
+                "type": "object",
+                "properties": {
+                  "overall": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "on_budget": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "on_time": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "positive": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "category_ratings": {
+                    "type": "object",
+                    "properties": {
+                      "communication": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "expertise": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "hire_again": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "quality": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "professionalism": {
+                        "type": "number",
+                        "description": "Decimal"
+                      }
+                    }
+                  },
+                  "all": {
+                    "type": "number"
+                  },
+                  "reviews": {
+                    "type": "number"
+                  },
+                  "incomplete_reviews": {
+                    "type": "number"
+                  },
+                  "complete": {
+                    "type": "number"
+                  },
+                  "incomplete": {
+                    "type": "number"
+                  },
+                  "earnings": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "description": "permission: `user:financial`. Decimal"
+                  },
+                  "completion_rate": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "rehire_rate": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "description": "Decimal"
+                  }
+                },
+                "required": [
+                  "overall",
+                  "on_budget",
+                  "on_time",
+                  "positive",
+                  "all",
+                  "reviews",
+                  "incomplete_reviews",
+                  "complete",
+                  "incomplete",
+                  "earnings",
+                  "completion_rate"
+                ]
+              },
+              "user_id": {
+                "type": "number"
+              },
+              "role": {
+                "type": "string",
+                "enum": [
+                  "freelancer",
+                  "employer"
+                ]
+              },
+              "earnings_score": {
+                "type": "number",
+                "description": "Decimal"
+              },
+              "job_history": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "count_other": {
+                    "type": "number"
+                  },
+                  "job_counts": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "count": {
+                          "type": "number"
+                        },
+                        "job": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "category": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "name": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "id"
+                              ]
+                            },
+                            "active_project_count": {
+                              "type": "number"
+                            },
+                            "seo_url": {
+                              "type": "string"
+                            },
+                            "seo_info": {
+                              "type": "object",
+                              "properties": {
+                                "seo_text": {
+                                  "type": "string"
+                                },
+                                "seo_text_alt": {
+                                  "type": "string"
+                                },
+                                "seo_worker": {
+                                  "type": "string"
+                                },
+                                "seo_worker_alt": {
+                                  "type": "string"
+                                },
+                                "seo_worker_plural": {
+                                  "type": "string"
+                                },
+                                "seo_worker_plural_alt": {
+                                  "type": "string"
+                                },
+                                "phrase_worker": {
+                                  "type": "string"
+                                },
+                                "context_phrase_worker": {
+                                  "type": "string"
+                                },
+                                "plural_phrase_worker": {
+                                  "type": "string"
+                                },
+                                "country_person": {
+                                  "type": "string"
+                                },
+                                "country_demonym": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "local": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "active_project_count"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "count",
+                        "job"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "count_other",
+                  "job_counts"
+                ]
+              },
+              "project_stats": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "open": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "required": [
+              "entire_history",
+              "last3months",
+              "last12months",
+              "earnings_score"
+            ]
+          },
+          "jobs": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "category": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                "active_project_count": {
+                  "type": "number"
+                },
+                "seo_url": {
+                  "type": "string"
+                },
+                "seo_info": {
+                  "type": "object",
+                  "properties": {
+                    "seo_text": {
+                      "type": "string"
+                    },
+                    "seo_text_alt": {
+                      "type": "string"
+                    },
+                    "seo_worker": {
+                      "type": "string"
+                    },
+                    "seo_worker_alt": {
+                      "type": "string"
+                    },
+                    "seo_worker_plural": {
+                      "type": "string"
+                    },
+                    "seo_worker_plural_alt": {
+                      "type": "string"
+                    },
+                    "phrase_worker": {
+                      "type": "string"
+                    },
+                    "context_phrase_worker": {
+                      "type": "string"
+                    },
+                    "plural_phrase_worker": {
+                      "type": "string"
+                    },
+                    "country_person": {
+                      "type": "string"
+                    },
+                    "country_demonym": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "local": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "id",
+                "active_project_count"
+              ]
+            }
+          },
+          "profile_description": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "hourly_rate": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Decimal"
+          },
+          "registration_date": {
+            "type": "number"
+          },
+          "limited_account": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "display_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "tagline": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "location": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "country": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "flag_url": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "code": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "highres_flag_url": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "flag_url_cdn": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "highres_flag_url_cdn": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              },
+              "city": {
+                "type": "string"
+              },
+              "latitude": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "longitude": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "vicinity": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "administritive_area": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "full_address": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "avatar_large": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "role": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "freelancer",
+              "employer",
+              null
+            ]
+          },
+          "chosen_role": {
+            "type": "string",
+            "enum": [
+              "freelancer",
+              "employer",
+              "both"
+            ]
+          },
+          "employer_reputation": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "entire_history": {
+                "type": "object",
+                "properties": {
+                  "overall": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "on_budget": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "on_time": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "positive": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "category_ratings": {
+                    "type": "object",
+                    "properties": {
+                      "communication": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "expertise": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "hire_again": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "quality": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "professionalism": {
+                        "type": "number",
+                        "description": "Decimal"
+                      }
+                    }
+                  },
+                  "all": {
+                    "type": "number"
+                  },
+                  "reviews": {
+                    "type": "number"
+                  },
+                  "incomplete_reviews": {
+                    "type": "number"
+                  },
+                  "complete": {
+                    "type": "number"
+                  },
+                  "incomplete": {
+                    "type": "number"
+                  },
+                  "earnings": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "description": "permission: `user:financial`. Decimal"
+                  },
+                  "completion_rate": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "rehire_rate": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "description": "Decimal"
+                  }
+                },
+                "required": [
+                  "overall",
+                  "on_budget",
+                  "on_time",
+                  "positive",
+                  "all",
+                  "reviews",
+                  "incomplete_reviews",
+                  "complete",
+                  "incomplete",
+                  "earnings",
+                  "completion_rate"
+                ]
+              },
+              "last3months": {
+                "type": "object",
+                "properties": {
+                  "overall": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "on_budget": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "on_time": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "positive": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "category_ratings": {
+                    "type": "object",
+                    "properties": {
+                      "communication": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "expertise": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "hire_again": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "quality": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "professionalism": {
+                        "type": "number",
+                        "description": "Decimal"
+                      }
+                    }
+                  },
+                  "all": {
+                    "type": "number"
+                  },
+                  "reviews": {
+                    "type": "number"
+                  },
+                  "incomplete_reviews": {
+                    "type": "number"
+                  },
+                  "complete": {
+                    "type": "number"
+                  },
+                  "incomplete": {
+                    "type": "number"
+                  },
+                  "earnings": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "description": "permission: `user:financial`. Decimal"
+                  },
+                  "completion_rate": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "rehire_rate": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "description": "Decimal"
+                  }
+                },
+                "required": [
+                  "overall",
+                  "on_budget",
+                  "on_time",
+                  "positive",
+                  "all",
+                  "reviews",
+                  "incomplete_reviews",
+                  "complete",
+                  "incomplete",
+                  "earnings",
+                  "completion_rate"
+                ]
+              },
+              "last12months": {
+                "type": "object",
+                "properties": {
+                  "overall": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "on_budget": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "on_time": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "positive": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "category_ratings": {
+                    "type": "object",
+                    "properties": {
+                      "communication": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "expertise": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "hire_again": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "quality": {
+                        "type": "number",
+                        "description": "Decimal"
+                      },
+                      "professionalism": {
+                        "type": "number",
+                        "description": "Decimal"
+                      }
+                    }
+                  },
+                  "all": {
+                    "type": "number"
+                  },
+                  "reviews": {
+                    "type": "number"
+                  },
+                  "incomplete_reviews": {
+                    "type": "number"
+                  },
+                  "complete": {
+                    "type": "number"
+                  },
+                  "incomplete": {
+                    "type": "number"
+                  },
+                  "earnings": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "description": "permission: `user:financial`. Decimal"
+                  },
+                  "completion_rate": {
+                    "type": "number",
+                    "description": "Decimal"
+                  },
+                  "rehire_rate": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "description": "Decimal"
+                  }
+                },
+                "required": [
+                  "overall",
+                  "on_budget",
+                  "on_time",
+                  "positive",
+                  "all",
+                  "reviews",
+                  "incomplete_reviews",
+                  "complete",
+                  "incomplete",
+                  "earnings",
+                  "completion_rate"
+                ]
+              },
+              "user_id": {
+                "type": "number"
+              },
+              "role": {
+                "type": "string",
+                "enum": [
+                  "freelancer",
+                  "employer"
+                ]
+              },
+              "earnings_score": {
+                "type": "number",
+                "description": "Decimal"
+              },
+              "job_history": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "count_other": {
+                    "type": "number"
+                  },
+                  "job_counts": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "count": {
+                          "type": "number"
+                        },
+                        "job": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "category": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "name": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "id"
+                              ]
+                            },
+                            "active_project_count": {
+                              "type": "number"
+                            },
+                            "seo_url": {
+                              "type": "string"
+                            },
+                            "seo_info": {
+                              "type": "object",
+                              "properties": {
+                                "seo_text": {
+                                  "type": "string"
+                                },
+                                "seo_text_alt": {
+                                  "type": "string"
+                                },
+                                "seo_worker": {
+                                  "type": "string"
+                                },
+                                "seo_worker_alt": {
+                                  "type": "string"
+                                },
+                                "seo_worker_plural": {
+                                  "type": "string"
+                                },
+                                "seo_worker_plural_alt": {
+                                  "type": "string"
+                                },
+                                "phrase_worker": {
+                                  "type": "string"
+                                },
+                                "context_phrase_worker": {
+                                  "type": "string"
+                                },
+                                "plural_phrase_worker": {
+                                  "type": "string"
+                                },
+                                "country_person": {
+                                  "type": "string"
+                                },
+                                "country_demonym": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "local": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "active_project_count"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "count",
+                        "job"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "count_other",
+                  "job_counts"
+                ]
+              },
+              "project_stats": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "open": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "required": [
+              "entire_history",
+              "last3months",
+              "last12months",
+              "earnings_score"
+            ]
+          },
+          "status": {
+            "type": "object",
+            "properties": {
+              "payment_verified": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "email_verified": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "deposit_made": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "profile_complete": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "phone_verified": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "identity_verified": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "facebook_connected": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "freelancer_verified_user": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "linkedin_connected": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              }
+            }
+          },
+          "avatar_cdn": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "avatar_large_cdn": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "primary_currency": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "code": {
+                "type": "string"
+              },
+              "sign": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "exchange_rate": {
+                "type": "number",
+                "description": "Decimal"
+              },
+              "country": {
+                "type": "string"
+              },
+              "is_external": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "code",
+              "sign"
+            ]
+          },
+          "account_balances": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "bids_remaining": {
+                "type": "number"
+              },
+              "jobs_remaining": {
+                "type": "number"
+              },
+              "job_changes_remaining": {
+                "type": "number"
+              },
+              "service_postings_remaining": {
+                "type": "number"
+              },
+              "balances": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "amount": {
+                      "type": "number",
+                      "description": "Decimal"
+                    },
+                    "currency": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "code": {
+                          "type": "string"
+                        },
+                        "sign": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "exchange_rate": {
+                          "type": "number",
+                          "description": "Decimal"
+                        },
+                        "country": {
+                          "type": "string"
+                        },
+                        "is_external": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "code",
+                        "sign"
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "description": "permission: `financial:get`"
+          },
+          "membership_package": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "name": {
+                "type": "string"
+              },
+              "bid_limit": {
+                "type": "number"
+              },
+              "bid_refresh_rate": {
+                "type": "number",
+                "description": "Decimal"
+              },
+              "time_bid_refreshed": {
+                "type": "number"
+              },
+              "job_limit": {
+                "type": "number"
+              },
+              "job_change_limit": {
+                "type": "number"
+              },
+              "service_posting_limit": {
+                "type": "number"
+              }
+            },
+            "description": "permission: `user:personal`"
+          },
+          "qualifications": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "name": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "level": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "type": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "icon_url": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "icon_name": {
+                  "type": "string"
+                },
+                "score_percentage": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "description": "Decimal"
+                },
+                "user_percentile": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "description": "Decimal"
+                },
+                "insignia_id": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          "badges": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "time_awarded": {
+                  "type": "number"
+                },
+                "icon_url": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "primary_language": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "search_languages": {
+            "type": [
+              "array",
+              "null"
+            ]
+          },
+          "cover_image": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {}
+          },
+          "portfolio_count": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "preferred_freelancer": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "support_status": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "technical",
+                  "assisted",
+                  "local",
+                  "project_management"
+                ]
+              },
+              "short_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "first_name": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "permission: `user:personal`"
+          },
+          "last_name": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "permission: `user:personal`"
+          },
+          "mobile_tracking": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {}
+          },
+          "is_local": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "endorsements": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {}
+          },
+          "timezone": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "country": {
+                "type": "string"
+              },
+              "timezone": {
+                "type": "string"
+              },
+              "offset": {
+                "type": "number",
+                "description": "Decimal"
+              }
+            }
+          },
+          "recommendations": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "date_of_birth": {
+            "type": "object",
+            "properties": {
+              "day": {
+                "type": "number"
+              },
+              "month": {
+                "type": "number"
+              },
+              "year": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "day",
+              "month",
+              "year"
+            ],
+            "description": "permission: `user:personal`"
+          },
+          "responsiveness": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Decimal"
+          },
+          "bid_quality_details": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "user_id 1": {
+                "type": "number"
+              },
+              "score": {
+                "type": "number"
+              }
+            },
+            "description": "permission: `user:personal`"
+          },
+          "deposit_methods": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "deposit_methods": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "default_currency": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "code": {
+                          "type": "string"
+                        },
+                        "sign": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "exchange_rate": {
+                          "type": "number",
+                          "description": "Decimal"
+                        },
+                        "country": {
+                          "type": "string"
+                        },
+                        "is_external": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "code",
+                        "sign"
+                      ]
+                    },
+                    "deposit_fee_configs": {
+                      "type": "object",
+                      "properties": {
+                        "currency_id": {
+                          "type": "number"
+                        },
+                        "min_amount": {
+                          "type": "number",
+                          "description": "Decimal"
+                        },
+                        "max_amount": {
+                          "type": "number",
+                          "description": "Decimal"
+                        },
+                        "deposit_method": {
+                          "type": "string",
+                          "enum": [
+                            "paypal",
+                            "fln_billing",
+                            "skrill",
+                            "web_money",
+                            "wire",
+                            "paypal_reference",
+                            "boleto",
+                            "alipay",
+                            "union_pay",
+                            "ideal",
+                            "sofort",
+                            "giropay",
+                            "interac",
+                            "bancontact",
+                            "dotpay",
+                            "paytm",
+                            "paytm_subscription",
+                            "wechatpay",
+                            "googlepay",
+                            "applepay"
+                          ]
+                        },
+                        "fee_fixed_amount": {
+                          "type": "number",
+                          "description": "Decimal"
+                        },
+                        "fee_rate": {
+                          "type": "number",
+                          "description": "Decimal"
+                        }
+                      },
+                      "required": [
+                        "currency_id",
+                        "min_amount",
+                        "max_amount"
+                      ]
+                    },
+                    "native_charge": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "name",
+                    "default_currency",
+                    "deposit_fee_configs",
+                    "native_charge"
+                  ]
+                }
+              },
+              "is_cc_eligible true": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "deposit_methods",
+              "is_cc_eligible true"
+            ]
+          },
+          "marketing_mobile_number": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "country_code": {
+                "type": "string"
+              },
+              "phone_number": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "invalid",
+                  "valid"
+                ]
+              }
+            },
+            "required": [
+              "country_code",
+              "phone_number"
+            ],
+            "description": "permission: `user:personal`"
+          },
+          "user_sanctions": {
+            "type": [
+              "array",
+              "null"
+            ]
+          },
+          "freelancer_verified_status": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "pending",
+              "accepted",
+              "rejected",
+              "removed",
+              "review",
+              null
+            ],
+            "description": "permission: `user:personal`"
+          },
+          "is_profile_visible": {
+            "type": "boolean"
+          },
+          "equipment_groups": {
+            "type": "array"
+          },
+          "has_marketing_mobile_number": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "is_shareholder": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "is_staff": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "username",
+          "is_profile_visible"
+        ]
+      }
+    }
+  },
+  "required": [
+    "total_count",
+    "users"
+  ]
+}

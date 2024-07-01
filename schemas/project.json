@@ -1,0 +1,446 @@
+{
+  "type": "object",
+  "properties": {
+    "total_count": {
+      "type": "number"
+    },
+    "selected_bids": {
+      "type": "null"
+    },
+    "users": {
+      "type": "null"
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "owner_id": {
+            "type": "number"
+          },
+          "title": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "closed",
+              "frozen",
+              "draft",
+              "pending",
+              "rejected"
+            ]
+          },
+          "seo_url": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "code": {
+                "type": "string"
+              },
+              "sign": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "exchange_rate": {
+                "type": "number",
+                "description": "Decimal"
+              },
+              "country": {
+                "type": "string"
+              },
+              "is_external": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "code",
+              "sign"
+            ]
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "jobs": {
+            "type": [
+              "array",
+              "null"
+            ]
+          },
+          "preview_description": {
+            "type": "string"
+          },
+          "deleted": {
+            "type": "boolean"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "fixed",
+              "hourly"
+            ]
+          },
+          "bidperiod": {
+            "type": "number"
+          },
+          "budget": {
+            "type": "object",
+            "properties": {
+              "minimum": {
+                "type": "number",
+                "description": "Decimal"
+              },
+              "maximum": {
+                "type": "number",
+                "description": "Decimal"
+              },
+              "name": {
+                "type": "string"
+              },
+              "project_type": {
+                "type": "string",
+                "enum": [
+                  "fixed",
+                  "hourly"
+                ]
+              },
+              "currency_id": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "minimum",
+              "currency_id"
+            ]
+          },
+          "bid_stats": {
+            "type": "object",
+            "properties": {
+              "bid_count": {
+                "type": "number"
+              },
+              "bid_avg": {
+                "type": "number",
+                "description": "Decimal"
+              }
+            }
+          },
+          "time_submitted": {
+            "type": "number"
+          },
+          "time_updated": {
+            "type": "number"
+          },
+          "upgrades": {
+            "type": "object",
+            "properties": {
+              "NDA": {
+                "type": "boolean"
+              },
+              "urgent": {
+                "type": "boolean"
+              },
+              "featured": {
+                "type": "boolean"
+              },
+              "nonpublic": {
+                "type": "boolean"
+              },
+              "fulltime": {
+                "type": "boolean"
+              },
+              "qualified": {
+                "type": "boolean"
+              },
+              "sealed": {
+                "type": "boolean"
+              },
+              "ip_contract": {
+                "type": "boolean"
+              },
+              "success_bundle": {
+                "type": "boolean"
+              },
+              "non_compete": {
+                "type": "boolean"
+              },
+              "project_management": {
+                "type": "boolean"
+              },
+              "pf_only": {
+                "type": "boolean"
+              },
+              "listed": {
+                "type": "boolean"
+              },
+              "recruiter": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "qualified"
+            ]
+          },
+          "language": {
+            "type": "string"
+          },
+          "hireme": {
+            "type": "boolean"
+          },
+          "frontend_project_status": {
+            "type": "string",
+            "enum": [
+              "open",
+              "work_in_progress",
+              "complete",
+              "pending",
+              "draft"
+            ]
+          },
+          "location": {
+            "type": "object",
+            "properties": {
+              "country": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "flag_url": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "code": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "highres_flag_url": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "flag_url_cdn": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "highres_flag_url_cdn": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              },
+              "city": {
+                "type": "string"
+              },
+              "latitude": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "longitude": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "vicinity": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "administritive_area": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "full_address": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "local": {
+            "type": "boolean"
+          },
+          "negotiated": {
+            "type": "boolean"
+          },
+          "time_free_bids_expire": {
+            "type": "number"
+          },
+          "support_sessions": {
+            "type": "array"
+          },
+          "nda_details": {
+            "type": "object",
+            "properties": {
+              "hidden_description": {
+                "type": "string"
+              },
+              "signatures": {
+                "type": "array"
+              }
+            }
+          },
+          "local_details": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "project_id": {
+                "type": "number"
+              },
+              "date": {
+                "type": "object",
+                "properties": {
+                  "year": {
+                    "type": "number"
+                  },
+                  "month": {
+                    "type": "number"
+                  },
+                  "day": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "year",
+                  "month",
+                  "day"
+                ],
+                "description": "date specified by the employer when the project must be done"
+              },
+              "end_location": {
+                "type": "object",
+                "properties": {
+                  "country": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "flag_url": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "code": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "highres_flag_url": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "flag_url_cdn": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "highres_flag_url_cdn": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    }
+                  },
+                  "city": {
+                    "type": "string"
+                  },
+                  "latitude": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "longitude": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "vicinity": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "administritive_area": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "full_address": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            },
+            "required": [
+              "id",
+              "project_id"
+            ]
+          },
+          "equipment_group_details": {
+            "type": "array"
+          },
+          "service_offering_id": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "id",
+          "owner_id",
+          "title",
+          "status",
+          "deleted"
+        ]
+      }
+    }
+  },
+  "required": [
+    "total_count",
+    "projects"
+  ]
+}
