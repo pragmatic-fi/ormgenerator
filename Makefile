@@ -41,11 +41,11 @@ qa: test
 	@echo "========================================"
 	@echo "=== Checking import order with isort ==="
 	@echo "========================================"
-	@PATCH="$$(poetry run isort freesearch tests --diff)" && echo $$PATCH &&test -z "$$PATCH"
+	@PATCH="$$(poetry run isort ormgenerator tests --diff)" && echo $$PATCH &&test -z "$$PATCH"
 
 format:
 	@poetry run black -l 79 ormgenerator
 	@poetry run black -l 79 tests
-	@poetry run isort freesearch tests
+	@poetry run isort ormgenerator tests
 
 .PHONY: format help qa test
