@@ -1,0 +1,10 @@
+class {{ class_name }}(Base):
+    """Model for {{ class_name }}."""
+
+    __tablename__ = {{ tablename }}
+
+    # pylint: disable=consider-alternative-union-syntax
+    {% for field in class_fields %}
+    {{ field }}
+    {% endfor %}
+    # pylint: enable=consider-alternative-union-syntax

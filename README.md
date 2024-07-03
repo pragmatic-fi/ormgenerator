@@ -1,2 +1,6 @@
 # ormgenerator
-Generate SQLAlchemy ORM model from JSON schema. Alpha, not useful at all.
+Generate SQLAlchemy ORM model from JSON schema.
+
+## Usage
+
+After running `poetry install` try `poetry run generate classes.spec`.

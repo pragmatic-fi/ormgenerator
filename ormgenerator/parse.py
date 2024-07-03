@@ -83,7 +83,7 @@ _MAPPING = {
 
 # if type is an array, we understand only [real_type, "null"]
 _HACK_TYPE_LEN = 2
-_HACK_NULL = "null"
+_NULL = "null"
 
 
 def get_type(
@@ -108,14 +108,18 @@ def get_type(
         log.fatal("Element '%s' has no type, exiting.", element)
         sys.exit(1)
 
+    if tp == _NULL:
+        log.warning("Type of %s is null, skipping", name)
+        return []
+
     if isinstance(tp, list):
         # HACK: hardcoded behaviour
         if not len(tp) == _HACK_TYPE_LEN:
             log.fatal("Cannot process type '%s', exiting.", tp)
             sys.exit(1)
-        if (tp_real := tp[0]) == _HACK_NULL:
+        if (tp_real := tp[0]) == _NULL:
             tp_real = tp[1]
-        elif not tp[1] == _HACK_NULL:
+        elif not tp[1] == _NULL:
             log.fatal("Cannot process type '%s', exiting.", tp)
             sys.exit(1)
         required = False
