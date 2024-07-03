@@ -20,7 +20,7 @@ def _process_schema(schema: JsonType) -> list[str]:
 
     return [
         f"{fname(path)}: Mapped[{type_}]"
-        for path, type_ in get_type(schema, True)
+        for path, type_ in get_type("ROOT", schema, True)
     ]
 
 
